@@ -5,9 +5,10 @@ on:
         - main
 jobs:
     deploy-cloud-functions:
-      name: test
+      name: deploy
+
       steps:
-        id: deploy
+      - name: deploy
         uses: google-github-actions/deploy-cloud-functions@main
         with:
           name: function-1

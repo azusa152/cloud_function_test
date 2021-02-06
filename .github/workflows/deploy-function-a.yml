@@ -1,5 +1,5 @@
 steps:
-- id: deploy
+  id: deploy
   uses: google-github-actions/deploy-cloud-functions@main
   with:
     name: function-1

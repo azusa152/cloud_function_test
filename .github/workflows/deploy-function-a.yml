@@ -6,7 +6,7 @@ on:
 jobs:
     deploy-cloud-functions:
       name: deploy
-
+      runs-on: ubuntu-latest
       steps:
       - name: deploy
         uses: google-github-actions/deploy-cloud-functions@main

@@ -1,3 +1,8 @@
+on: 
+  push:
+      branches:
+        - main
+
 steps:
   id: deploy
   uses: google-github-actions/deploy-cloud-functions@main

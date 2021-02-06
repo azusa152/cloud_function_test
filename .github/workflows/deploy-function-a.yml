@@ -1,12 +1,14 @@
+name: cloud function
 on: 
   push:
       branches:
         - main
-
-steps:
-  id: deploy
-  uses: google-github-actions/deploy-cloud-functions@main
-  with:
-    name: function-1
-    runtime: ruby26
-    credentials: ${{ secrets.gcp_credentials }}
+jobs:
+    deploy-cloud-functions:
+  steps:
+    id: deploy
+    uses: google-github-actions/deploy-cloud-functions@main
+    with:
+      name: function-1
+      runtime: ruby26
+      credentials: ${{ secrets.gcp_credentials }}

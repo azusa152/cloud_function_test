@@ -5,10 +5,11 @@ on:
         - main
 jobs:
     deploy-cloud-functions:
-  steps:
-    id: deploy
-    uses: google-github-actions/deploy-cloud-functions@main
-    with:
-      name: function-1
-      runtime: ruby26
-      credentials: ${{ secrets.gcp_credentials }}
+      name: test
+      steps:
+        id: deploy
+        uses: google-github-actions/deploy-cloud-functions@main
+        with:
+          name: function-1
+          runtime: ruby26
+          credentials: ${{ secrets.gcp_credentials }}
